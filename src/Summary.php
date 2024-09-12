@@ -36,7 +36,7 @@ class Summary extends Metric {
   /**
    * Summary constructor.
    */
-  public function __construct(string $namespace, string $name, string $help, $label) {
+  public function __construct(string $namespace, string $name, string|\Stringable $help, $label) {
     parent::__construct($namespace, $name, $help);
     $this->sum = 0;
     $this->count = 0;
